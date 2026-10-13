@@ -1,0 +1,288 @@
+{
+  "schema_version": "1.0",
+  "project_id": "portfolio-01",
+  "title_ja": "経営分析ダッシュボード",
+  "title_en": "Executive Business Dashboard & Management Improvement Report",
+  "created_date": "2026-10-11",
+  "purpose": "AI関連企業への転職ポートフォリオ。AIによる架空データ生成から経営分析と改善提案までの一連の成果物を示す。",
+  "status": {
+    "workbook_exists": true,
+    "pdf_exists": true,
+    "excel_dashboard_windows_display_verified": true,
+    "department_filter_windows_verified": true,
+    "python_full_regeneration_on_windows_verified": false,
+    "new_transaction_row_addition_manually_verified": false,
+    "notes": "Excel完成版はWindowsで閲覧・操作確認。元PythonコードはWindows上でartifact_tool依存の実行エラーが残る。"
+  },
+  "data_disclaimer": "完全架空の企業・顧客・取引・改善試算。実在企業の導入・改善実績ではない。",
+  "company": {
+    "alias": "NBS-50",
+    "employee_count": 50,
+    "units": [
+      {
+        "code": "IT",
+        "name": "IT導入支援",
+        "staff": 20
+      },
+      {
+        "code": "BPO",
+        "name": "業務アウトソーシング",
+        "staff": 15
+      },
+      {
+        "code": "TRN",
+        "name": "企業研修・人材育成",
+        "staff": 10
+      },
+      {
+        "code": "HQ",
+        "name": "本社管理",
+        "staff": 5
+      }
+    ]
+  },
+  "data_profile": {
+    "year": 2025,
+    "months": 12,
+    "transactions": 608,
+    "customer_count": 45,
+    "seed": 20261011,
+    "is_fully_synthetic": true
+  },
+  "metrics": {
+    "year": 2025,
+    "transactions": 608,
+    "customers": 45,
+    "employees": 50,
+    "revenue_jpy": 630867000,
+    "variable_cost_jpy": 190938000,
+    "operating_profit_jpy": 29759000,
+    "sales_budget_jpy": 708653000,
+    "sales_budget_gap_jpy": -77786000,
+    "budget_achievement_ratio": 0.8902340073350427,
+    "operating_margin": 0.04717159084244381,
+    "top5_customer_revenue_share": 0.2789288392006556
+  },
+  "divisions": [
+    {
+      "code": "IT",
+      "revenue_jpy": 286325000,
+      "operating_profit_jpy": 785556,
+      "sales_budget_jpy": 334530000
+    },
+    {
+      "code": "BPO",
+      "revenue_jpy": 238960000,
+      "operating_profit_jpy": 28615667,
+      "sales_budget_jpy": 252000000
+    },
+    {
+      "code": "TRN",
+      "revenue_jpy": 105582000,
+      "operating_profit_jpy": 357777,
+      "sales_budget_jpy": 122123000
+    }
+  ],
+  "quarters": [
+    {
+      "code": "Q1",
+      "revenue_jpy": 149071000,
+      "operating_profit_jpy": 6026000
+    },
+    {
+      "code": "Q2",
+      "revenue_jpy": 160746000,
+      "operating_profit_jpy": 13882000
+    },
+    {
+      "code": "Q3",
+      "revenue_jpy": 154045000,
+      "operating_profit_jpy": 3356000
+    },
+    {
+      "code": "Q4",
+      "revenue_jpy": 167005000,
+      "operating_profit_jpy": 6495000
+    }
+  ],
+  "critical_issues": [
+    {
+      "title": "IT部門の低採算",
+      "observed_fact": "売上286325000円・営業利益785556円（利益率約0.27%）",
+      "hypothesis": "価格と提供工数が固定費に見合っていない可能性",
+      "action": "案件別採算可視化、価格改定、工程標準化"
+    },
+    {
+      "title": "BPOのQ4赤字",
+      "observed_fact": "Q4営業利益-866000円",
+      "hypothesis": "外注費率上昇、例外対応、負担増",
+      "action": "外注単価見直し、例外請求、標準化"
+    },
+    {
+      "title": "研修のQ3赤字",
+      "observed_fact": "Q3営業利益-6221334円",
+      "hypothesis": "季節的な受注減と固定費の影響",
+      "action": "閑散期講座、前倒し販売、講師稼働調整"
+    }
+  ],
+  "conditional_scenarios": [
+    {
+      "name": "IT平均実現単価+2%",
+      "expected_gain_jpy_approx": 5700000,
+      "assumption": "値上がり分が100%利益寄与"
+    },
+    {
+      "name": "BPO Q4変動費率-5ポイント",
+      "expected_gain_jpy_approx": 2900000,
+      "assumption": "売上一定、品質維持"
+    },
+    {
+      "name": "研修Q3 10講座追加",
+      "expected_gain_jpy_approx": 6400000,
+      "assumption": "講座単価80万円、限界利益率80%"
+    }
+  ],
+  "scenario_total_approx": {
+    "profit_uplift_jpy": 15000000,
+    "post_improvement_profit_jpy": 44800000,
+    "is_forecast": false
+  },
+  "sheets": [
+    "Dashboard",
+    "Transactions",
+    "Customers",
+    "Divisions",
+    "Budget",
+    "MonthlyCosts",
+    "Analysis",
+    "Validation",
+    "Guide_AI_Log"
+  ],
+  "dashboard_features": [
+    "KPI四指標",
+    "月次売上実績vs予算グラフ",
+    "部門別営業利益グラフ",
+    "部門選択",
+    "期間選択",
+    "顧客別売上集計",
+    "検算シート"
+  ],
+  "tech_stack": [
+    "ChatGPT",
+    "Python",
+    "Excel",
+    "artifact_tool（オリジナルXLSX生成コード）",
+    "reportlab（PDF生成）"
+  ],
+  "user_installed": [
+    "Python 3.15.0",
+    "pip 26.2.1",
+    "openpyxl 3.1.5",
+    "reportlab 5.0.1",
+    "Pillow 12.3.0"
+  ],
+  "tests": [
+    {
+      "test": "独立Python集計",
+      "status": "passed",
+      "result": "総売上630867000円、営業利益29759000円、608明細、45顧客"
+    },
+    {
+      "test": "Excel内部で取引の売上を+100000円に変更",
+      "status": "passed",
+      "result": "売上と営業利益ともに+100000円、Validation PASS（作成側テスト）"
+    },
+    {
+      "test": "部門BPO・Q4の選択",
+      "status": "passed",
+      "result": "売上58041000円、営業利益-866000円（作成側テスト）"
+    },
+    {
+      "test": "Windows版Excel表示",
+      "status": "passed",
+      "result": "KPIと2グラフを本人が目視確認"
+    },
+    {
+      "test": "Windowsで部門選択：全部門→IT",
+      "status": "passed",
+      "result": "IT売上286325000円を本人が確認"
+    },
+    {
+      "test": "Windows上でPythonを全工程実行",
+      "status": "blocked",
+      "result": "artifact_toolがインストールされておらず停止"
+    },
+    {
+      "test": "取引明細の新規1行追加",
+      "status": "not_verified",
+      "result": null
+    }
+  ],
+  "production_fixes": [
+    "本社共通費の端数処理を調整",
+    "架空予算の前提を調整（実績値改変なし）",
+    "互換性を考えSUMPRODUCT/ABS式を変更",
+    "PDF文字化けとフッター重複を修正"
+  ],
+  "windows_errors": [
+    {
+      "error": "FileNotFoundError: /mnt/data/portfolio01_metrics.json",
+      "resolution": "BASEをPath(__file__).resolve().parentに変更して解消"
+    },
+    {
+      "error": "ModuleNotFoundError: No module named artifact_tool",
+      "resolution": "未解消。オリジナルコードのWindows依存問題。"
+    }
+  ],
+  "roles": {
+    "ai": [
+      "架空データモデル設計",
+      "取引生成と集計",
+      "Excel構築",
+      "経営分析",
+      "PDF制作",
+      "修正方針提示"
+    ],
+    "human": [
+      "要件・品質要件設定",
+      "Windows環境構築",
+      "Excelの表示確認",
+      "部門切替の実機確認",
+      "成果物評価"
+    ]
+  },
+  "file_manifest": [
+    {
+      "name": "01_経営分析ダッシュボード.xlsx",
+      "type": "deliverable",
+      "notes": "元の9シート版"
+    },
+    {
+      "name": "01_経営改善提案レポート.pdf",
+      "type": "deliverable",
+      "notes": "3ページ"
+    },
+    {
+      "name": "01_AI活用_制作検算ログ.txt",
+      "type": "process-log"
+    },
+    {
+      "name": "build_portfolio01.py",
+      "type": "source",
+      "notes": "Windows上では再生成未完成"
+    },
+    {
+      "name": "Dashboard_実機スクリーンショット.png",
+      "type": "screenshot",
+      "notes": "Excel上での表示画像"
+    },
+    {
+      "name": "Portfolio01_引継ぎデータ.md",
+      "type": "handoff"
+    },
+    {
+      "name": "Portfolio01_掲載用テキスト.md",
+      "type": "website-copy"
+    }
+  ]
+}
